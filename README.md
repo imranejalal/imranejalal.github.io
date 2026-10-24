@@ -6,7 +6,7 @@ Public address: **https://imranejalal.github.io/**
 
 ## Structure
 
-The portfolio is a single page with six sections:
+The portfolio has two static language versions (English at `/`, French at `/fr/`), each with six sections. The FR / EN links appear in the desktop sidebar and mobile header:
 
 1. Welcome
 2. Engineering Courses
@@ -19,7 +19,8 @@ The portfolio is a single page with six sections:
 
 No framework, package installation, or build step is needed.
 
-- Edit text and add project cards in `index.html`.
+- Edit English text in `index.html` and French text in `fr/index.html`. Keep section IDs identical so language switches preserve the current section.
+- Both pages share the same stylesheet, scripts, images, and original TIPE PDF. The English version remains the default. Both language links work without JavaScript.
 - Change design variables and responsive layouts in `assets/css/styles.css`.
 - Menu, active navigation, and optional CV behavior live in `assets/js/main.js`.
 - Add a real CV to `assets/cv/`, then set `cvUrl` in `assets/js/settings.js`.

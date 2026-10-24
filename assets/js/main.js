@@ -7,12 +7,13 @@
   const links = [...document.querySelectorAll('.nav-link')];
   const mobile = window.matchMedia('(max-width: 960px)');
   const sections = [...document.querySelectorAll('main > section[id]')];
+  const isFrench = document.documentElement.lang === 'fr';
   const menuIsOpen = () => toggle.getAttribute('aria-expanded') === 'true';
 
   function setMenu(open, restoreFocus = false) {
     const isOpen = mobile.matches && open;
     toggle.setAttribute('aria-expanded', String(isOpen));
-    document.querySelector('.menu-label').textContent = isOpen ? 'Close' : 'Menu';
+    document.querySelector('.menu-label').textContent = isOpen ? (isFrench ? 'Fermer' : 'Close') : 'Menu';
     document.body.classList.toggle('menu-open', isOpen);
     backdrop.hidden = !isOpen;
     menu.inert = mobile.matches && !isOpen;
@@ -40,7 +41,7 @@
       setMenu(false, true);
     }
     if (event.key === 'Tab') {
-      const focusable = [toggle, ...menu.querySelectorAll('a')];
+      const focusable = [...document.querySelectorAll('.mobile-header .language-switch a'), toggle, ...menu.querySelectorAll('a')];
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
       if (event.shiftKey && document.activeElement === first) {
@@ -74,17 +75,26 @@
   }, { passive: true });
   window.addEventListener('resize', updateActiveSection);
   updateActiveSection();
+  // Both static translations share section IDs, so language changes keep your place.
+  document.querySelectorAll('[data-language]').forEach(link => {
+    link.addEventListener('click', () => {
+      const hash = document.querySelector('.nav-link.active')?.getAttribute('href');
+      const url = new URL(link.getAttribute('href'), window.location.href);
+      url.hash = hash && hash !== '#welcome' ? hash : '';
+      link.href = url.href;
+    });
+  });
   document.querySelector('#copyright-year').textContent = String(new Date().getFullYear());
 
   const settings = window.portfolioSettings;
   if (settings?.cvUrl) {
-    const url = new URL(settings.cvUrl, window.location.href);
+    const url = new URL(settings.cvUrl, `${window.location.origin}/`);
     if (url.origin === window.location.origin && /\.pdf$/i.test(url.pathname)) {
       const link = document.createElement('a');
       link.href = url.href;
       link.download = 'Imrane_Jalal_Mansour_CV.pdf';
       link.className = 'button button-primary';
-      link.textContent = settings.cvLabel || 'Download my CV';
+      link.textContent = isFrench ? (settings.cvLabelFr || 'Télécharger mon CV') : (settings.cvLabel || 'Download my CV');
       const container = document.querySelector('#cv-action');
       container.append(link);
       container.hidden = false;

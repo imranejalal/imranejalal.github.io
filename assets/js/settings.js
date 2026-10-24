@@ -3,5 +3,6 @@
    Keep null until the document is ready; no empty link is shown. */
 window.portfolioSettings = Object.freeze({
   cvUrl: null,
-  cvLabel: 'Download my CV'
+  cvLabel: 'Download my CV',
+  cvLabelFr: 'Télécharger mon CV'
 });
