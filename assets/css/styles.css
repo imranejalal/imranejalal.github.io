@@ -41,9 +41,9 @@
 .pitch-waiting-copy{font-size:11px;color:var(--muted);margin-top:14px;line-height:1.7}
 .pitch-download{margin-top:7px}
 .career-interviews{margin-top:40px}
-.interview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);border-radius:4px;overflow:hidden}
-.interview-card{min-width:0;padding:25px 22px;border-right:1px solid var(--line)}
-.interview-card:last-child{border-right:0}
+.interview-grid{display:grid;grid-template-columns:minmax(0,1fr);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.interview-card{min-width:0;padding:27px 26px;border-bottom:1px solid var(--line)}
+.interview-card:last-child{border-bottom:0}
 .interview-card .eyebrow{font-size:8px}
 .interview-card h4{font-family:var(--serif);font-size:25px;line-height:1.2;letter-spacing:-.02em;margin-top:14px;color:var(--burgundy)}
 .interview-notes{font-size:11px;line-height:1.9;margin-top:14px;color:var(--muted)}
