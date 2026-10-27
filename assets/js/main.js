@@ -87,6 +87,30 @@
   document.querySelector('#copyright-year').textContent = String(new Date().getFullYear());
 
   const settings = window.portfolioSettings;
+  const pitchVideo = document.querySelector('#pitch-player');
+  const pitchWaiting = document.querySelector('#pitch-waiting');
+  const pitchDownload = document.querySelector('#pitch-download');
+  if (pitchVideo && pitchWaiting && settings?.pitchVideoUrl) {
+    const videoUrl = new URL(settings.pitchVideoUrl, `${window.location.origin}/`);
+    if (videoUrl.origin === window.location.origin && /\.mp4$/i.test(videoUrl.pathname)) {
+      // A missing file keeps the honest "coming soon" card visible. Once the
+      // owner uploads pitch.mp4, native playback appears on the next page load.
+      pitchVideo.addEventListener('loadedmetadata', () => {
+        pitchVideo.hidden = false;
+        pitchWaiting.hidden = true;
+        pitchDownload.hidden = false;
+        window.requestAnimationFrame(updateActiveSection);
+      });
+      pitchVideo.addEventListener('error', () => {
+        pitchVideo.hidden = true;
+        pitchWaiting.hidden = false;
+        pitchDownload.hidden = true;
+      });
+      pitchDownload.querySelector('a').href = videoUrl.href;
+      pitchVideo.src = videoUrl.href;
+      pitchVideo.load();
+    }
+  }
   if (settings?.cvUrl) {
     const url = new URL(settings.cvUrl, `${window.location.origin}/`);
     if (url.origin === window.location.origin && /\.pdf$/i.test(url.pathname)) {

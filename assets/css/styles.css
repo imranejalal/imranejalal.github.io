@@ -27,3 +27,25 @@
 @media print{.language-switch{display:none!important}}
 
 @media(max-width:700px){.mobility-layout{grid-template-columns:minmax(0,1fr)}.journey-stops{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}.journey-stop,.mobility-copy{min-width:0}}
+
+/* Career project: one future video and three honest interview placeholders. */
+.career-pitch{margin-top:58px;padding-top:34px;border-top:1px solid var(--line);scroll-margin-top:100px}
+.pitch-intro{max-width:680px;margin-bottom:24px;font-size:12px;line-height:1.9;color:var(--muted)}
+.pitch-frame{aspect-ratio:16/9;width:100%;overflow:hidden;border:1px solid var(--line);border-radius:4px;background:var(--paper)}
+.pitch-player{display:block;width:100%;height:100%;object-fit:contain;background:var(--ink)}
+.pitch-waiting{height:100%;padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.pitch-monogram{font-family:var(--serif);font-size:70px;line-height:1;letter-spacing:-7px;font-style:italic;color:var(--burgundy);margin-bottom:24px}
+.pitch-monogram>span{color:#AC7A69}
+.pitch-waiting .eyebrow{font-size:8px}
+.pitch-waiting-title{font-family:var(--serif);font-size:clamp(25px,3.2vw,44px);line-height:1.15;letter-spacing:-.025em;color:var(--burgundy);margin-top:13px}
+.pitch-waiting-copy{font-size:11px;color:var(--muted);margin-top:14px;line-height:1.7}
+.pitch-download{margin-top:7px}
+.career-interviews{margin-top:40px}
+.interview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.interview-card{min-width:0;padding:25px 22px;border-right:1px solid var(--line)}
+.interview-card:last-child{border-right:0}
+.interview-card .eyebrow{font-size:8px}
+.interview-card h4{font-family:var(--serif);font-size:25px;line-height:1.2;letter-spacing:-.02em;margin-top:14px;color:var(--burgundy)}
+.interview-notes{font-size:11px;line-height:1.9;margin-top:14px;color:var(--muted)}
+@media(max-width:700px){.career-pitch{margin-top:38px;padding-top:28px}.pitch-intro{font-size:12px;margin-bottom:20px}.pitch-frame{min-height:240px;aspect-ratio:4/3}.pitch-waiting{padding:24px 18px}.pitch-monogram{font-size:53px;margin-bottom:16px}.pitch-waiting-title{font-size:29px}.pitch-waiting-copy{font-size:10px;margin-top:10px}.pitch-player{object-fit:contain}.career-interviews{margin-top:32px}.interview-grid{grid-template-columns:1fr}.interview-card{border-right:0;border-bottom:1px solid var(--line);padding:23px}.interview-card:last-child{border-bottom:0}.interview-card h4{font-size:27px;margin-top:11px}.interview-notes{font-size:12px;margin-top:12px}}
+@media print{.pitch-frame{min-height:0;aspect-ratio:auto}.pitch-waiting{padding:18px}.pitch-monogram,.pitch-player,.pitch-download{display:none!important}.pitch-waiting-title{font-size:25px}.interview-grid{break-inside:avoid}.career-pitch{margin-top:25px;padding-top:20px}}

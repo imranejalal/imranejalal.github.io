@@ -22,11 +22,23 @@ No framework, package installation, or build step is needed.
 - Edit English text in `index.html` and French text in `fr/index.html`. Keep section IDs identical so language switches preserve the current section.
 - Both pages share the same stylesheet, scripts, images, and original TIPE PDF. The English version remains the default. Both language links work without JavaScript.
 - Change design variables and responsive layouts in `assets/css/styles.css`.
-- Menu, active navigation, and optional CV behavior live in `assets/js/main.js`.
+- Menu, active navigation, automatic pitch video display, and optional CV behavior live in `assets/js/main.js`.
 - Add a real CV to `assets/cv/`, then set `cvUrl` in `assets/js/settings.js`.
 - A personal photo can be added later by replacing the decorative `.journal-cover` block in `index.html` with a `<figure>` and image. Supply descriptive alt text and intrinsic width/height.
 - The original TIPE presentation is at `assets/pdf/TIPE_Imrane_Jalal_Mansour_2026.pdf`.
 - The project illustration is extracted from the original TIPE presentation, slide 30.
+
+## Pitch video and interviews
+
+Upload the real video as **`assets/video/pitch.mp4`**, commit it to `main`, then
+wait for GitHub Pages to deploy. The video replaces the coming-soon card in both
+language versions automatically, with playback controls and no autoplay.
+No code change is needed. See `assets/video/README.md` for step-by-step instructions.
+A missing video keeps the placeholder visible; no sample video is published.
+
+Under the video, edit `interview-1`, `interview-2`, and `interview-3` in the two
+HTML files. Use each person's actual name and one paragraph about their career,
+advice, and what I learned. The current entries are explicitly placeholders.
 
 ## GitHub Pages
 
@@ -49,7 +61,7 @@ Then open `http://localhost:8000`.
 - Semantic sections, heading hierarchy, a skip link, keyboard navigation, and visible focus styles.
 - Mobile menu with Escape handling and focus management.
 - Reduced-motion preferences and print styles.
-- All content and documents remain usable without JavaScript.
+- Text and documents remain usable without JavaScript; a direct MP4 link is provided as the video fallback once uploaded.
 - The locally hosted P052 typeface is part of URW Base35. Its license is included in `assets/fonts/LICENSE.txt`.
 
 The site describes my own background and interests. It will grow as I gain experience.
