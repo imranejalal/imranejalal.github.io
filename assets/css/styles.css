@@ -68,3 +68,10 @@
 @media(max-width:1220px){.mobility-plan{padding:24px}.mobility-plan h4{font-size:27px}.mobility-plan-details dd{font-size:12px}}
 @media(max-width:700px){.mobility-plans{margin-top:36px;padding-top:28px}.mobility-plans .subsection-heading{flex-direction:column;gap:8px}.mobility-plans .subsection-heading>span{max-width:none;padding-top:0;text-align:left;font-size:7px}.mobility-plans-intro{font-size:12px;margin-top:16px}.mobility-plans-grid{grid-template-columns:minmax(0,1fr);gap:18px}.mobility-plan{padding:25px 22px}.mobility-plan h4{font-size:29px;margin-bottom:23px}.mobility-plan-details dd{font-size:13px}.mobility-plan-details dt{font-size:8px}.mobility-plan>.text-link{font-size:11px}}
 @media print{.mobility-plans-grid{grid-template-columns:1fr 1fr;gap:14px}.mobility-plan{break-inside:avoid;background:transparent;padding:18px}.mobility-plan>.text-link{display:none}.mobility-plan-details dd{font-size:10px}.mobility-plan h4{font-size:24px}}
+
+/* The completed academic journey belongs to Welcome; mobility looks ahead. */
+.welcome-journey{margin-top:38px;scroll-margin-top:100px;align-items:start}
+.mobility-summary{display:grid;grid-template-columns:1.1fr 1fr;gap:45px;align-items:start}
+.mobility-summary .language-block{margin-top:0}
+@media(max-width:1220px){.mobility-summary{gap:28px}}
+@media(max-width:700px){.welcome-journey{margin-top:30px}.mobility-summary{grid-template-columns:minmax(0,1fr);gap:24px}.mobility-summary>div{min-width:0}}
