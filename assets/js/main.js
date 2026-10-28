@@ -86,6 +86,21 @@
   });
   document.querySelector('#copyright-year').textContent = String(new Date().getFullYear());
 
+  // Each real MMC photo replaces only its own placeholder when uploaded.
+  document.querySelectorAll('img[data-competition-photo]').forEach(photo => {
+    const placeholder = photo.closest('.competition-photo-frame').querySelector('.competition-photo-placeholder');
+    photo.addEventListener('load', () => {
+      photo.hidden = false;
+      placeholder.hidden = true;
+      window.requestAnimationFrame(updateActiveSection);
+    });
+    photo.addEventListener('error', () => {
+      photo.hidden = true;
+      placeholder.hidden = false;
+    });
+    photo.src = photo.dataset.competitionPhoto;
+  });
+
   const settings = window.portfolioSettings;
   const pitchVideo = document.querySelector('#pitch-player');
   const pitchWaiting = document.querySelector('#pitch-waiting');

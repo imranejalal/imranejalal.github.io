@@ -10,10 +10,16 @@ The portfolio has two static language versions (English at `/`, French at `/fr/`
 
 1. Welcome
 2. Engineering Courses
-3. International Mobility
-4. Sustainability and Civic Engagement
-5. Sport and Other Activities
-6. Career Development
+3. Sustainability and Civic Engagement
+4. International Mobility
+5. Career Development
+6. Sport and Other Activities
+
+Welcome contains the personal introduction, the academic journey, **Education**,
+and **Achievements** (CNC rank and MMC participation). Engineering Courses contains
+academic projects followed by technical skills. Mobility contains future study
+plans followed by languages. Career Development groups the introduction, pitch,
+professional links, and interviews. Both language versions follow the same order.
 
 ## Editing
 
@@ -27,6 +33,15 @@ No framework, package installation, or build step is needed.
 - A personal photo can be added later by replacing the decorative `.journal-cover` block in `index.html` with a `<figure>` and image. Supply descriptive alt text and intrinsic width/height.
 - The original TIPE presentation is at `assets/pdf/TIPE_Imrane_Jalal_Mansour_2026.pdf`.
 - The project illustration is extracted from the original TIPE presentation, slide 30.
+
+## MMC competition photos
+
+The two photo slots are in **Welcome → Achievements**, under the MMC entry.
+Upload the real JPEG photos as **`assets/images/mmc/photo-1.jpg`** and
+**`assets/images/mmc/photo-2.jpg`**, then commit to `main`. Each photo automatically
+replaces its own coming-soon placeholder in both languages after deployment.
+The two photos can be added separately. No sample competition photo is included.
+See `assets/images/mmc/README.md` for the upload instructions.
 
 ## Pitch video and interviews
 

@@ -75,3 +75,38 @@
 .mobility-summary .language-block{margin-top:0}
 @media(max-width:1220px){.mobility-summary{gap:28px}}
 @media(max-width:700px){.welcome-journey{margin-top:30px}.mobility-summary{grid-template-columns:minmax(0,1fr);gap:24px}.mobility-summary>div{min-width:0}}
+
+/* Content organisation: education and achievements are part of Welcome. */
+.welcome-chapters{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:26px}
+.welcome-chapters>.text-link{min-height:44px;font-size:12px}
+.welcome-education,.welcome-achievements{margin-top:38px;scroll-margin-top:105px}
+.welcome-education .welcome-journey{margin-top:0}
+.welcome-education-detail{min-width:0}
+.welcome-education-detail .education-item{grid-template-columns:115px minmax(0,1fr);gap:18px}
+.welcome-education-detail .education-item>div:nth-child(2){padding-right:20px}
+.journey-reflection{margin-top:28px}
+.ranking-number{font-family:var(--serif);font-size:44px;line-height:1.1;letter-spacing:-.035em;color:var(--burgundy)}
+.ranking-number sup{font-family:var(--sans);font-size:12px;letter-spacing:0;vertical-align:super}
+.cnc-achievement .eyebrow{font-size:7px;color:var(--burgundy);margin:0 0 8px}
+.mmc-entry{border-bottom:1px solid var(--line);padding-bottom:26px}
+.mmc-entry>.education-item{border-bottom:0}
+.competition-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:6px}
+.competition-photo{margin:0;min-width:0}
+.competition-photo-frame{position:relative;aspect-ratio:16/10;display:grid;place-items:center;overflow:hidden;border:1px solid var(--line);border-radius:3px;background:var(--paper)}
+.competition-photo-frame img{display:block;width:100%;height:100%;object-fit:contain;background:var(--paper)}
+.competition-photo-frame img[hidden],.competition-photo-placeholder[hidden]{display:none}
+.competition-photo-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center}
+.competition-photo-placeholder>span{font-family:var(--serif);font-size:36px;line-height:1;color:var(--burgundy);opacity:.6}
+.competition-photo-placeholder>p{font-size:11px;color:var(--muted);margin-top:12px}
+.competition-photo figcaption{font-size:9px;line-height:1.7;color:var(--muted);margin-top:10px}
+#engineering-courses .projects-heading{margin-top:0}
+.mobility-intro{max-width:720px}
+.mobility-languages{margin-top:38px;padding-top:28px;border-top:1px solid var(--line)}
+.mobility-languages>h3{font-size:25px;line-height:1.25;letter-spacing:-.02em;margin-bottom:17px}
+.mobility-languages>.languages{max-width:680px}
+.career-resources{margin-top:38px;padding-top:28px;border-top:1px solid var(--line);scroll-margin-top:100px}
+.career-resources .career-links{display:flex;flex-wrap:wrap;gap:14px 24px;margin-top:0}
+.career-resources #cv-action{margin-top:18px}
+@media(max-width:1220px){.welcome-education .mobility-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}.welcome-education-detail .education-item{grid-template-columns:minmax(0,1fr);gap:10px}.welcome-education-detail .education-date{flex-direction:row;align-items:center}}
+@media(max-width:700px){.welcome-chapters{gap:10px 24px;margin-top:20px}.welcome-education,.welcome-achievements{margin-top:30px}.welcome-education .mobility-layout{grid-template-columns:minmax(0,1fr)}.journey-reflection{margin-top:24px}.competition-gallery{grid-template-columns:minmax(0,1fr);gap:22px}.competition-photo figcaption{font-size:10px}.mobility-languages,.career-resources{margin-top:30px;padding-top:24px}.mobility-languages>h3{font-size:24px}}
+@media print{.welcome-chapters{display:none}.cnc-achievement,.competition-photo{break-inside:avoid}.competition-gallery{grid-template-columns:1fr 1fr}.competition-photo-frame{max-height:180px}.welcome-education,.welcome-achievements{margin-top:25px}}
