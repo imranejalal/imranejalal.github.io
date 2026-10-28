@@ -36,11 +36,15 @@ No framework, package installation, or build step is needed.
 
 ## MMC competition photos
 
-The two photo slots are in **Welcome → Achievements**, under the MMC entry.
-Upload the real JPEG photos as **`assets/images/mmc/photo-1.jpg`** and
-**`assets/images/mmc/photo-2.jpg`**, then commit to `main`. Each photo automatically
-replaces its own coming-soon placeholder in both languages after deployment.
-The two photos can be added separately. No sample competition photo is included.
+The gallery is in **Welcome → Achievements**, under the MMC entry.
+The current uploaded PNG files are:
+
+- `assets/images/mmc/mmc groupe.png`: the group photograph.
+- `assets/images/mmc/mmc.png`: the competition logo.
+
+Both language versions use these same files with their current names.
+To replace an image, upload the replacement in the same folder with the same
+filename and commit to `main`. A missing image keeps its own placeholder visible.
 See `assets/images/mmc/README.md` for the upload instructions.
 
 ## Pitch video and interviews

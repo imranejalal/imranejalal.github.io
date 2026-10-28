@@ -1,26 +1,29 @@
-# Photos de la Math&Maroc Competition — été 2025
+# Visuels de la Math&Maroc Competition — été 2025
 
-Les deux emplacements sont visibles dans **Accueil → Distinctions**, sous la participation à la MMC.
+Les images apparaissent dans **Accueil → Distinctions**, sous la participation à la MMC.
 
-## Ajouter les deux photos
+## Fichiers utilisés
 
-1. Prépare deux photos réelles de ta participation à cette compétition au format JPEG.
-2. Nomme-les exactement `photo-1.jpg` et `photo-2.jpg` (en minuscules).
+- `mmc groupe.png` : photo de groupe.
+- `mmc.png` : logo de la Math&Maroc Competition.
+
+Les deux fichiers ont été ajoutés au dépôt avec ces noms. Les versions française et anglaise
+du portfolio utilisent les mêmes images. Il n’est pas nécessaire de les renommer.
+
+## Remplacer une image
+
+1. Prépare le nouveau fichier au format PNG.
+2. Garde le nom exact de l’image remplacée, y compris l’espace dans `mmc groupe.png`.
 3. Dans ce dossier GitHub, clique sur **Add file → Upload files**.
-4. Ajoute les photos et valide avec **Commit changes** sur `main`.
-5. Après le déploiement GitHub Pages, les photos s’affichent automatiquement dans les versions française et anglaise.
+4. Ajoute le fichier et valide avec **Commit changes** sur `main`.
+5. La nouvelle image apparaît après le déploiement GitHub Pages.
 
-Tu peux ajouter une seule photo à la fois. L’autre emplacement reste « Photo à venir ».
-Une photo manquante ou illisible laisse son emplacement visible. Aucun changement du code n’est nécessaire.
-Le nom du fichier doit correspondre à son format : renommer un fichier PNG en `.jpg` ne le convertit pas en JPEG.
-
-Chemins attendus :
-
-- `assets/images/mmc/photo-1.jpg`
-- `assets/images/mmc/photo-2.jpg`
+Une image manquante ou illisible laisse son emplacement visible.
+Si tu choisis d’autres noms de fichiers, les liens du portfolio devront être adaptés.
 
 ## English
 
-Upload the two real competition photos in this folder as `photo-1.jpg` and `photo-2.jpg`,
-then commit to `main`. Each photo replaces its own placeholder in **Welcome → Achievements**
-in both languages after GitHub Pages deploys. You may add the photos separately.
+The gallery in **Welcome → Achievements** uses `mmc groupe.png` (group photograph)
+and `mmc.png` (competition logo). Both language versions use the same files.
+To update an image, upload a replacement PNG with the exact same filename and commit to `main`.
+The gallery updates after GitHub Pages deploys.
