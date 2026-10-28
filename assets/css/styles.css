@@ -90,7 +90,7 @@
 .cnc-achievement .eyebrow{font-size:7px;color:var(--burgundy);margin:0 0 8px}
 .mmc-entry{border-bottom:1px solid var(--line);padding-bottom:26px}
 .mmc-entry>.education-item{border-bottom:0}
-.competition-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:6px}
+.competition-gallery{display:grid;grid-template-columns:minmax(0,1fr);max-width:680px;gap:20px;margin-top:6px}
 .competition-photo{margin:0;min-width:0}
 .competition-photo-frame{position:relative;aspect-ratio:16/10;display:grid;place-items:center;overflow:hidden;border:1px solid var(--line);border-radius:3px;background:var(--paper)}
 .competition-photo-frame img{display:block;width:100%;height:100%;object-fit:contain;background:var(--paper)}
@@ -109,4 +109,4 @@
 .career-resources #cv-action{margin-top:18px}
 @media(max-width:1220px){.welcome-education .mobility-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}.welcome-education-detail .education-item{grid-template-columns:minmax(0,1fr);gap:10px}.welcome-education-detail .education-date{flex-direction:row;align-items:center}}
 @media(max-width:700px){.welcome-chapters{gap:10px 24px;margin-top:20px}.welcome-education,.welcome-achievements{margin-top:30px}.welcome-education .mobility-layout{grid-template-columns:minmax(0,1fr)}.journey-reflection{margin-top:24px}.competition-gallery{grid-template-columns:minmax(0,1fr);gap:22px}.competition-photo figcaption{font-size:10px}.mobility-languages,.career-resources{margin-top:30px;padding-top:24px}.mobility-languages>h3{font-size:24px}}
-@media print{.welcome-chapters{display:none}.cnc-achievement,.competition-photo{break-inside:avoid}.competition-gallery{grid-template-columns:1fr 1fr}.competition-photo-frame{max-height:180px}.welcome-education,.welcome-achievements{margin-top:25px}}
+@media print{.welcome-chapters{display:none}.cnc-achievement,.competition-photo{break-inside:avoid}.competition-gallery{grid-template-columns:1fr}.competition-photo-frame{max-height:180px}.welcome-education,.welcome-achievements{margin-top:25px}}
