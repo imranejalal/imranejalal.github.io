@@ -115,3 +115,12 @@
 @media(max-width:1220px){.welcome-education .mobility-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}.welcome-education-detail .education-item{grid-template-columns:minmax(0,1fr);gap:10px}.welcome-education-detail .education-date{flex-direction:row;align-items:center}}
 @media(max-width:700px){.welcome-chapters{gap:10px 24px;margin-top:20px}.welcome-education,.welcome-achievements{margin-top:30px}.welcome-education .mobility-layout{grid-template-columns:minmax(0,1fr)}.journey-reflection{margin-top:24px}.competition-gallery{grid-template-columns:minmax(0,1fr);gap:22px}.competition-photo figcaption{font-size:10px}.mobility-languages,.career-resources{margin-top:30px;padding-top:24px}.mobility-languages>h3{font-size:24px}}
 @media print{.welcome-chapters{display:none}.cnc-achievement,.competition-photo{break-inside:avoid}.competition-gallery{grid-template-columns:1fr}.competition-photo-frame{max-height:180px}.welcome-education,.welcome-achievements{margin-top:25px}}
+
+/* Email contacts in the sidebar and mobile menu. */
+.sidebar-contact{display:grid;gap:10px;min-width:0}
+.sidebar-contact-title{font-family:var(--sans);font-size:8px;font-weight:600;line-height:1.5;letter-spacing:.12em;text-transform:uppercase;color:var(--burgundy)}
+.sidebar-bottom a.sidebar-email{display:grid;align-items:start;gap:2px;min-width:0}
+.sidebar-email-label{font-size:8px;line-height:1.5}
+.sidebar-email-address{font-size:10px;line-height:1.6;overflow-wrap:anywhere;color:var(--ink)}
+.sidebar-email:hover .sidebar-email-address{color:var(--burgundy)}
+@media(max-width:960px){.sidebar-email-label{font-size:10px}.sidebar-email-address{font-size:11px}}
