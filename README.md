@@ -28,7 +28,7 @@ No framework, package installation, or build step is needed.
 - Edit English text in `index.html` and French text in `fr/index.html`. Keep section IDs identical so language switches preserve the current section.
 - Both pages share the same stylesheet, scripts, images, and original TIPE PDF. The English version remains the default. Both language links work without JavaScript.
 - Change design variables and responsive layouts in `assets/css/styles.css`.
-- Menu, active navigation, automatic pitch video display, and optional CV behavior live in `assets/js/main.js`.
+- Menu, active navigation, and optional CV behavior live in `assets/js/main.js`.
 - Add a real CV to `assets/cv/`, then set `cvUrl` in `assets/js/settings.js`.
 - A personal photo can be added later by replacing the decorative `.journal-cover` block in `index.html` with a `<figure>` and image. Supply descriptive alt text and intrinsic width/height.
 - The original TIPE presentation is at `assets/pdf/TIPE_Imrane_Jalal_Mansour_2026.pdf`.
@@ -49,21 +49,22 @@ See `assets/images/mmc/README.md` for the upload instructions.
 
 ## Pitch video and interviews
 
-Upload the real video as **`assets/video/pitch.mp4`**, commit it to `main`, then
-wait for GitHub Pages to deploy. The video replaces the coming-soon card in both
-language versions automatically, with playback controls and no autoplay.
-No code change is needed. See `assets/video/README.md` for step-by-step instructions.
-A missing video keeps the placeholder visible; no sample video is published.
+The pitch is hosted on YouTube: **https://youtu.be/jkFv1a_8dXc**.
+Both language versions embed the same video with playback controls, fullscreen
+support, and no autoplay. A direct YouTube link appears below the player.
+The MP4 is no longer stored in the current repository. To replace the video,
+update the iframe URL and the direct link in both HTML files. See
+`assets/video/README.md` for details.
 
 Under the video, edit `interview-1`, `interview-2`, and `interview-3` in the two
 HTML files. Use each person's actual name and one paragraph about their career,
-advice, and what I learned. The current entries are explicitly placeholders.
+advice, and what I learned.
 
 ## GitHub Pages
 
 In **Settings → Pages**, select **Deploy from a branch**, choose **main** and **/ (root)**, and save. The root `.nojekyll` file keeps the site buildless. No paid service is required.
 
-After a commit, GitHub Pages redeploys the site automatically. The public PDF and all fonts are hosted in the same repository. There are no external scripts, trackers, cookies, or API keys.
+After a commit, GitHub Pages redeploys the site automatically. The public PDF and all fonts are hosted in the same repository. The pitch uses YouTube’s privacy-enhanced embedded player; the remaining assets are hosted locally. No API keys are used.
 
 ## Local preview
 
@@ -80,7 +81,7 @@ Then open `http://localhost:8000`.
 - Semantic sections, heading hierarchy, a skip link, keyboard navigation, and visible focus styles.
 - Mobile menu with Escape handling and focus management.
 - Reduced-motion preferences and print styles.
-- Text and documents remain usable without JavaScript; a direct MP4 link is provided as the video fallback once uploaded.
+- Text and documents remain usable without JavaScript; a direct YouTube link is provided as a fallback for the embedded player.
 - The locally hosted P052 typeface is part of URW Base35. Its license is included in `assets/fonts/LICENSE.txt`.
 
 The site describes my own background and interests. It will grow as I gain experience.

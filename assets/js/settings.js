@@ -2,8 +2,6 @@
    Example: cvUrl: 'assets/cv/Imrane_Jalal_Mansour_CV.pdf'
    Keep null until the document is ready; no empty link is shown. */
 window.portfolioSettings = Object.freeze({
-  // The pitch section waits for the replacement video link.
-  pitchVideoUrl: null,
   cvUrl: null,
   cvLabel: 'Download my CV',
   cvLabelFr: 'Télécharger mon CV'

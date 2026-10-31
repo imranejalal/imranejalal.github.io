@@ -133,3 +133,9 @@
 
 /* Keep the year aligned at the right after removing the journal label. */
 .topline{justify-content:flex-end}
+
+/* YouTube keeps the pitch player responsive in the existing frame. */
+.pitch-youtube-frame{aspect-ratio:16/9;min-height:0}
+.pitch-youtube{border:0}
+.pitch-watch-link{margin-top:7px}
+@media print{.pitch-youtube-frame,.pitch-watch-link{display:none!important}}
